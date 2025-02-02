@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Imporant meta information to make the page as rigid as possible on mobiles, to avoid unintentional zooming on the page itself  -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Character Tutorial</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        background: #000000;
+        font-family: "EB Garamond", serif;
+      }
+
+      * {
+        touch-action: manipulation;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+      }
+
+      .centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #c {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 50;
+        pointer-events: none;
+      }
+
+      #ui {
+        position: absolute;
+        top: 0;
+      }
+
+      #rsvp {
+        z-index: 100;
+        text-shadow: 0 0 15px #ff0000;
+        padding-top: -1em;
+        font-size: 4.5em;
+        text-decoration: none;
+        color: red;
+        <!-- font-style: italic; -->
+        font-weight: bold;
+        -webkit-transition: text-shadow 500ms linear 0s;
+      	-moz-transition: text-shadow 500ms linear 0s;
+      	-o-transition: text-shadow 500ms linear 0s;
+      	transition: text-shadow 500ms linear 0s;
+      }
+
+      #rsvp:hover, #rsvp:focus {
+        text-shadow: 0 0 30px #ff0000;
+        -webkit-transition: 500ms linear 0s;
+      	-moz-transition: 500ms linear 0s;
+      	-o-transition: 500ms linear 0s;
+      	transition: 500ms linear 0s;
+      }
+
+      #location {
+        padding: 20px;
+        margin-top: -50px;
+        font-size: 3em;
+        font-style: italic;
+      }
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+        text-shadow: 0 0 5px #ffeecc;
+      }
+      
+      @media only screen and (max-width: 1280px) {
+        svg {
+          height: 150px;
+        }
+      }
+
+      @media only screen and (max-width: 650px) {
+        #rsvp {
+          font-size: 3em;
+        }
+
+        #location {
+          font-size: 2em;
+        }
+
+        svg {
+          height: 150px;
+        }
+      }
+
+      .loading {
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        background: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader{
+        -webkit-perspective: 120px;
+        -moz-perspective: 120px;
+        -ms-perspective: 120px;
+        perspective: 120px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .loader:before{
+        content: "";
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        width: 50px;
+        height: 50px;
+        background-color: #fa3928;
+        animation: flip 1s infinite;
+      }
+
+      @keyframes flip {
+        0% {
+          transform: rotate(0);
+        }
+
+        50% {
+          transform: rotateY(180deg);
+        }
+
+        100% {
+          transform: rotateY(180deg)  rotateX(180deg);
+        }
+      }
+    </style>
+    
+</head>
+<body>
+  
+<div class="loading" id="js-loader"><div class="loader"></div></div>
+<div class="wrapper">
+<div id="ui">
+<svg id="banner" width="100%" height="250px" viewBox="0 0 1098.72 89.55">
+  <path id="curve" fill="transparent" d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"></path>
+  <text width="100%" style="transform:translate3d(0,0,0); fill: white;" font-family="EB Garamond, serif">
+      <textPath style="transform:translate3d(0,0,0);" alignment-baseline="top" xlink:href="#curve" startOffset="200px" id="text-path1" font-size="2em">You are cordially invited to our wedding celebration!</textPath>
+  </text>
+  <text width="100%" style="transform:translate3d(0,0,0); fill: red;" font-family="EB Garamond, serif" font-style="italic">
+      <textPath style="transform:translate3d(0,0,0);" alignment-baseline="top" xlink:href="#curve" startOffset="200px" id="text-path2" font-size="2em">Jinyao & Diptodip</textPath>
+  </text>
+</svg>
+<div id="location" class="centered"><p><i>on May 11, 2025 at <a href="https://www.venue1902.com">Historic Venue 1902, Sanford FL</a></i></p></div>
+<div class="centered"><a id="rsvp" href="https://docs.google.com/forms/d/e/1FAIpQLSdRCpWKEXa_h80xN8m-ADJciyrkE-hvPQURVH4ZhCtIxQ55Hg/viewform?usp=header">RSVP HERE</a></div>
+</div>
+<div class="centered"><canvas id="c"></canvas></div>
+</div>
+</body>
+</html>
+
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.173.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.173.0/examples/jsm/"
+    }
+  }
+</script>
+<script type="module" src="animations.js"></script>
