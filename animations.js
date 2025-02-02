@@ -25,8 +25,8 @@ const h = document.documentElement,
       sh = 'scrollHeight';
 
 function init() {
-  const YAOYAO = '/fortnite_yaoyao.glb';
-  const GUAGUA = '/hiphop_guagua2.glb';
+  const YAOYAO = 'fortnite_yaoyao.glb';
+  const GUAGUA = 'hiphop_guagua2.glb';
   const canvas = document.querySelector('#c');
   const backgroundColor = 0xe8ddda;
   scene = new THREE.Scene();
