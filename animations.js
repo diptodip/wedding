@@ -139,7 +139,7 @@ function init() {
   scene.add(floor);
   const fontLoader = new FontLoader();
   const font = fontLoader.load(
-    "/noto_sans.json",
+    "noto_sans.json",
     function(font) { 
       const text = "囍";
       const size = 3;
