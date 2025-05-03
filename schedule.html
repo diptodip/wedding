@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Imporant meta information to make the page as rigid as possible on mobiles, to avoid unintentional zooming on the page itself  -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jinyao & Diptodip</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        background: #000000;
+        font-family: "EB Garamond", serif;
+      }
+
+      * {
+        touch-action: manipulation;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+      }
+
+      .centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .stickybottom {
+        position: fixed;
+        bottom: 0;
+        padding-bottom: 50px;
+        width: 100%;
+      }
+
+      #ui {
+        position: absolute;
+        top: 0;
+      }
+
+      #schedule {
+        padding: 20px;
+        font-size: 2em;
+        font-weight: 500;
+        color: red;
+      }
+
+      .tg  {border-collapse:collapse;border-spacing:0;}
+      .tg td{border-color:black;border-style:solid;border-width:0px;
+        overflow:hidden;padding:10px 20px;word-break:normal;}
+      .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+      .tg .tg-0lax{text-align:left;vertical-align:top}
+      
+      @media only screen and (max-width: 1280px) {
+        svg {
+          font-size: 2.5em;
+          height: 150px;
+        }
+
+        #schedule {
+          font-size: 1.5em;
+        }
+      }
+
+      @media only screen and (max-width: 650px) {
+        #rsvp {
+          font-size: 3em;
+        }
+
+        #location {
+          font-size: 2em;
+        }
+
+        #schedule {
+          font-size: 1.2em;
+        }
+        .tg td{padding:5px 10px;}
+
+        svg {
+          font-size: 3em;
+          height: 150px;
+        }
+      }
+    </style>
+    
+</head>
+<body>
+  
+<div class="wrapper">
+<div id="ui">
+<div class="centered">
+<div id="schedule">
+<table class="tg"><thead>
+  <tr>
+    <td class="tg-0pky">3:00 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Guests begin arriving (Complimentary valet + parking attendants on 7<sup>th</sup> Street and in the rear venue parking lot)</span></td>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3:30 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Chinese ceremony begins (Tea ceremony): Upstairs</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">4:00 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Chinese ceremony ends!</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">4:30 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Bengali ceremony begins: Upstairs</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">5:30 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Bengali ceremony ends!&nbsp;&nbsp;Cocktail hour begins downstairs and garden area</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">6:30 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Guests move back upstairs to auditorium for reception</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">6:45 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Special dances &amp; singing: Family friends will dance &amp; sing with the couple</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">7:00 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Toasts by friends and family</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">7:30 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Dinner begins: Buffet opens</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">8:15 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Cake cutting</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">8:20 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Dancing</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">9:45 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Wedding ceremony conclude: Pack up and exit</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">10:00 pm</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">We leave the venue</span></td>
+  </tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
